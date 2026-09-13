@@ -66,6 +66,12 @@ assets/food/<帖子标识>/image-01.jpg
 - 纯静态部署
 - 数据与页面逻辑分离
 
+## TODO
+
+- [ ] 营业状态标签
+- [ ] 定位补充
+- [ ] 可视化地图
+
 ## 作者
 
 [@baitou-13](https://github.com/baitou-13)
