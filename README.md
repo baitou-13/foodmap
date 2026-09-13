@@ -18,15 +18,19 @@
 
 ```text
 .
-├── index.html          # 时间轴首页
-├── post.html           # 帖子详情页模板
-├── app.js              # 首页数据渲染与交互
-├── post.js             # 详情页数据渲染
-├── posts.js            # 美食帖子数据
-├── styles.css          # 全站样式
-└── assets/
-    ├── brand/          # 网站标志
-    └── food/           # 帖子图片
+├── docs/               # GitHub Pages 网站
+│   ├── index.html      # 时间轴首页
+│   ├── post.html       # 帖子详情页模板
+│   ├── app.js          # 首页数据渲染与交互
+│   ├── post.js         # 详情页数据渲染
+│   ├── posts.js        # 美食帖子数据
+│   ├── styles.css      # 全站样式
+│   └── assets/         # 品牌图片与帖子配图
+└── tools/              # 腾讯频道帖子归档工具
+    ├── ocr_scraper.py
+    ├── qq_queue_downloader.py
+    ├── requirements.txt
+    └── README.md
 ```
 
 ## 本地运行
@@ -34,7 +38,7 @@
 项目没有第三方依赖。进入项目目录后启动任意静态文件服务器，例如：
 
 ```bash
-python -m http.server 4173
+python -m http.server 4173 --directory docs
 ```
 
 然后访问：
@@ -57,7 +61,13 @@ assets/food/<帖子标识>/image-01.jpg
 
 ## 部署
 
-网站使用 GitHub Pages 发布，发布源为 `main` 分支根目录。推送更新后，GitHub Pages 会自动重新构建。
+网站使用 GitHub Pages 发布，发布源为 `main` 分支的 `/docs` 目录。推送更新后，GitHub Pages 会自动重新构建。
+
+## 归档工具
+
+`tools/` 中包含腾讯频道帖子归档脚本。安装与使用方法见 [`tools/README.md`](tools/README.md)。
+
+运行前请复制 `tools/.env.example` 为 `tools/.env`，并填写自己的 QQ 应用凭据。`.env`、浏览器登录资料、抓取队列和本地缓存均已被 Git 忽略，不应提交到公开仓库。
 
 ## 技术特点
 

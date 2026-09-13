@@ -1,0 +1,4 @@
+playwright>=1.55,<2
+rapidocr-onnxruntime>=1.4,<2
+opencv-python==4.10.0.84
+Pillow>=11,<13

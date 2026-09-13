@@ -1,0 +1,11 @@
+.env
+**/.env
+.browser-profile/
+**/.browser-profile/
+__pycache__/
+**/__pycache__/
+work/
+**/work/
+post_queue.jsonl
+**/post_queue.jsonl
+*.pyc
