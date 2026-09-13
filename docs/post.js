@@ -5,7 +5,7 @@
   const root = document.getElementById('post-detail');
   if (!p) { root.innerHTML = `<div class="not-found"><span>404</span><h1>这顿饭暂时找不到</h1><a href="index.html">回到食迹</a></div>`; return; }
   const d = new Date(p.posted_at), date = new Intl.DateTimeFormat('zh-CN', {year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(d);
-  document.title = `${p.title || '一顿饭'} · 食迹`;
+  document.title = `${p.title || '一顿饭'} · 食记`;
   const images = (p.images || []).map((img, i) => `<figure class="photo photo-${i % 3}"><img src="assets/food/${encodeURIComponent(p.slug)}/${encodeURIComponent(img)}" alt="帖子配图 ${i+1}" loading="${i ? 'lazy' : 'eager'}"></figure>`).join('');
   root.innerHTML = `
     <article>
